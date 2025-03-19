@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "5315376274",
+    "firebase_url": "https://pln-project-a6867-default-rtdb.firebaseio.com",
+    "project_id": "pln-project-a6867",
+    "storage_bucket": "pln-project-a6867.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5315376274:android:9b40fc81605ea2b012224b",
+        "android_client_info": {
+          "package_name": "com.pln.tracepoint"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmd_NpbIyw6X5C7YUmTAzMff6QhosyQeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
