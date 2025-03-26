@@ -1,11 +1,14 @@
+import org.gradle.api.tasks.Delete
+import org.gradle.api.file.Directory
+
 buildscript {
     repositories {
-        google()  // Pastikan ini ada
+        google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'  // Pastikan versi sesuai
-        classpath 'com.google.gms:google-services:4.3.10' // Plugin Google Services
+        classpath("com.android.tools.build:gradle:8.1.0") // Pastikan versi sesuai
+        classpath("com.google.gms:google-services:4.3.10") // Plugin Google Services
     }
 }
 
@@ -16,17 +19,20 @@ allprojects {
     }
 }
 
-val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
-rootProject.layout.buildDirectory.value(newBuildDir)
+// Konfigurasi ulang lokasi folder build agar lebih terorganisir
+val newBuildDir = rootProject.layout.buildDirectory.dir("../../build")
+rootProject.layout.buildDirectory.set(newBuildDir)
 
 subprojects {
-    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
-    project.layout.buildDirectory.value(newSubprojectBuildDir)
+    val newSubprojectBuildDir = newBuildDir.map { it.dir(project.name) }
+    project.layout.buildDirectory.set(newSubprojectBuildDir)
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
-tasks.register<Delete>("clean") {
+// Task untuk membersihkan build directory
+tasks.register("clean", Delete::class) {
     delete(rootProject.layout.buildDirectory)
 }
