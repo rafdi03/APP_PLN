@@ -1,44 +1,34 @@
-from django.shortcuts import render, redirect
+import os
+from django.conf import settings
 from django.http import JsonResponse
-from firebase_admin import auth
-from django.views.decorators.csrf import csrf_exempt
-import json
+from django.views import View
+from django.core.files.storage import default_storage
+import cv2
+from ultralytics import YOLO  # Pastikan ultralytics sudah diinstal
 
-# Tampilkan halaman login
-def login_page(request):
-    return render(request, "login.html")
+# Path lengkap ke model
+MODEL_PATH = os.path.join(settings.BASE_DIR, "best.pt")
 
-# Login ke Firebase via Form
-@csrf_exempt
-def login_user(request):
-    if request.method == "POST":
-        email = request.POST.get("email")
-        password = request.POST.get("password")
+# Load model YOLO
+model = YOLO(MODEL_PATH)
 
-        if not email or not password:
-            return render(request, "login.html", {"error": "Email dan password harus diisi!"})
+class YoloDetectView(View):
+    def post(self, request, *args, **kwargs):
+        if 'image' not in request.FILES:
+            return JsonResponse({'error': 'No image uploaded'}, status=400)
 
-        try:
-            # Login ke Firebase (Gunakan API Firebase REST Authentication)
-            import requests
-            firebase_api_key = "AIzaSyDGtHUBEiEvB7txoHRMUy8TARehsMafh2s"  # Ganti dengan API Key Firebase kamu
-            firebase_auth_url = f"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={firebase_api_key}"
+        image = request.FILES['image']
+        image_path = default_storage.save(f'temp/{image.name}', image)
+        image_full_path = os.path.join(default_storage.location, image_path)
 
-            data = {
-                "email": email,
-                "password": password,
-                "returnSecureToken": True
-            }
+        # Baca gambar
+        img = cv2.imread(image_full_path)
 
-            response = requests.post(firebase_auth_url, json=data)
-            result = response.json()
+        # Jalankan YOLO untuk deteksi
+        results = model(img)
+        num_detections = len(results[0].boxes)  # Hitung jumlah objek yang terdeteksi
 
-            if "idToken" in result:
-                return JsonResponse({"message": "Login berhasil", "uid": result["localId"]})
-            else:
-                return render(request, "login.html", {"error": "Login gagal. Cek email atau password!"})
+        # Hapus gambar setelah diproses
+        os.remove(image_full_path)
 
-        except Exception as e:
-            return render(request, "login.html", {"error": str(e)})
-
-    return render(request, "login.html")
+        return JsonResponse({'detections': num_detections})

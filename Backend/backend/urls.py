@@ -1,7 +1,7 @@
-from django.urls import path
-from .views import login_page, login_user
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path("login/", login_page, name="login_page"),  # Halaman login
-    path("login-user/", login_user, name="login_user"),  # Proses login
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),  # Menghubungkan ke API
 ]
