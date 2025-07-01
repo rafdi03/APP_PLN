@@ -30,7 +30,6 @@ untuk meningkatkan efisiensi, transparansi, dan akurasi dalam pengelolaan proyek
   Pengingat otomatis untuk aktivitas atau deadline penting.
 - **Manajemen User & Hak Akses**  
   Atur siapa saja yang dapat mengakses/mengelola data proyek.
-- *(Tambahkan fitur lain sesuai perkembangan)*
 
 ---
 
