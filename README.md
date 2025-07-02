@@ -20,10 +20,6 @@
 
 ---
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/placeholder/banner-app-pln.png" alt="APP PLN Banner" style="border-radius: 12px; box-shadow: 0 0 24px #0084d1;">
-</p>
-
 <h1 align="center">APP_PLN</h1>
 <p align="center"><b>
 Aplikasi digitalisasi manajemen proyek kelistrikan untuk <br>
@@ -168,33 +164,15 @@ Kontribusi sangat terbuka 🎉:
 
 ---
 
-## 📄 **Lisensi**
-
-Belum ada lisensi resmi.  
-Silakan buka [Issues](https://github.com/rafdi03/APP_PLN/issues) untuk berdiskusi mengenai lisensi.
-
----
-
 ## 📬 **Kontak**
 
 - **GitHub**: [rafdi03](https://github.com/rafdi03) [Buitenzorx](https://github.com/Buitenzorx) 
 - **Email**: aryagunayasa15@gmail.com
-
----
-
-<div align="center">
-
-> **APP_PLN** adalah fondasi digitalisasi manajemen proyek kelistrikan PLN Sumba, NTT.<br>
-> Bersama kita wujudkan masa depan energi yang efisien, modern, dan transparan! ⚡️
-
-</div>
-
 ---
 
 <details>
   <summary><b>Credits & Thanks</b></summary>
   <ul>
-    <li>PT. PLN (Persero) UIP Nusa Tenggara Timur</li>
     <li>Seluruh kontributor & pengguna</li>
   </ul>
 </details>
