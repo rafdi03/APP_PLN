@@ -5,7 +5,7 @@
 ╚██╗ ██╔╝██╔══██║██╔═══╝ ██║  ██║    ██╔═══╝ ██║      ██║╚██╗██║
  ╚████╔╝ ██║  ██║██║     ██████╔╝    ██║     ███████╗ ██║ ╚████║
   ╚═══╝  ╚═╝  ╚═╝╚═╝     ╚═════╝     ╚═╝     ╚══════╝ ╚═╝  ╚═══╝
-             Digitalisasi Manajemen Proyek Ketenagalistrikan
+           Digitalization of Electricity Project Management
 -->
 
 
@@ -20,159 +20,152 @@
 
 ---
 
-<h1 align="center">APP_PLN</h1>
+<h1 align="center">APP PLN</h1>
 <p align="center"><b>
-Aplikasi digitalisasi manajemen proyek kelistrikan untuk <br>
-UNIT PELAKSANA PROYEK KETENAGALISTRIKAN SUMBA <br>
+A digital platform for electricity project management<br>
+For UNIT PELAKSANA PROYEK KETENAGALISTRIKAN SUMBA<br>
 PT. PLN (Persero) UNIT INDUK WILAYAH NUSA TENGGARA TIMUR
 </b></p>
 
 ---
 
-## 🎯 **Tujuan & Visi**
+## 🎯 **Purpose & Vision**
 
-APP_PLN hadir sebagai solusi digital untuk mengubah proses pengelolaan proyek kelistrikan dari manual menjadi otomatis dan efisien. Platform ini membantu tim PLN Sumba dalam monitoring, pelaporan, dan kolaborasi proyek secara real-time, aman, serta terintegrasi.
+APP_PLN is designed to revolutionize the management of electricity projects, transforming manual processes into efficient, automated, and transparent digital workflows. The platform empowers the PLN Sumba team with real-time monitoring, reporting, and collaboration in a secure and integrated environment.
 
-- **Efisiensi**: Semua data dan proses terpusat, minim human error
-- **Transparansi**: Laporan dan progres mudah dipantau
-- **Akurasi**: Data selalu up-to-date dan dapat diakses kapan saja
+- **Efficiency:** Centralizes all data and processes, minimizing human error
+- **Transparency:** Project reports and progress are easily monitored
+- **Accuracy:** Data is always up-to-date and accessible anytime
 
 ---
 
-## 🖥️ **Tampilan & Arsitektur**
-
-<table>
-  <tr>
-    <td align="center"><b>Dashboard Monitoring</b></td>
-    <td align="center"><b>Manajemen Proyek</b></td>
-    <td align="center"><b>Laporan & Notifikasi</b></td>
-  </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/placeholder/dashboard_pln.png" width="250"></td>
-    <td><img src="https://user-images.githubusercontent.com/placeholder/project_mgmt.png" width="250"></td>
-    <td><img src="https://user-images.githubusercontent.com/placeholder/report_notify.png" width="250"></td>
-  </tr>
-</table>
-
+## 🖥️ **UI & Architecture**
 ```
 +---------------------------------------------------------------+
-|                        Arsitektur APP_PLN                    |
+|                         APP_PLN Architecture                 |
 +-------------------+        +-------------------+              |
 |   Mobile Client   |<------>|   REST API/BE     |---+          |
 +-------------------+        +-------------------+   |          |
                                          |            |         |
                                          v            v         |
                                  +---------------------------+  |
-                                 |       Database PLN        |  |
+                                 |         PLN Database      |  |
                                  +---------------------------+  |
 ```
 
 ---
 
-## ✨ **Fitur Unggulan**
+## ✨ **Key Features**
 
-| Fitur                      | Penjelasan                                                                                           |
-|----------------------------|------------------------------------------------------------------------------------------------------|
-| **Dashboard Real-Time**    | Pantau status & progres proyek secara visual dan terintegrasi.                                       |
-| **Input & Update Data**    | Mudah menambah/mutakhirkan data proyek melalui aplikasi.                                             |
-| **Laporan Progres**        | Rekap harian/mingguan, ekspor ke PDF/Excel, dan bisa dishare ke stakeholder.                        |
-| **Notifikasi & Reminder**  | Pengingat otomatis untuk deadline, update, dan milestone penting.                                   |
-| **Manajemen User & Hak Akses** | Atur peran, hak akses, dan keamanan setiap pengguna.                                         |
-| **Kolaborasi Tim**         | Fasilitas diskusi, komentar, dan update status antar anggota.                                        |
-| **Integrasi Data**         | Semua data proyek terpusat, mudah diakses, dan siap digunakan kapan saja.                            |
-
----
-
-## 🛠 **Teknologi & Tools**
-
-| Komponen           | Stack/Tools                                |
-|--------------------|--------------------------------------------|
-| **Frontend**       | Flutter (Dart)                             |
-| **Backend**        | (Opsional: Node.js, Express, atau Firebase)|
-| **Database**       | (Opsional: PostgreSQL, Firestore, MySQL)   |
-| **Version Control**| GitHub                                     |
-| **Platform**       | Android, iOS                               |
+| Feature                     | Description                                                                                         |
+|-----------------------------|-----------------------------------------------------------------------------------------------------|
+| **Real-Time Dashboard**     | Visual and integrated overview of project status and progress.                                      |
+| **Data Input & Update**     | Easily add or update project data through the application.                                          |
+| **Progress Reports**        | Daily/weekly recaps, exportable to PDF/Excel, sharable with stakeholders.                          |
+| **Notifications & Reminders** | Automatic reminders for deadlines, updates, and important milestones.                          |
+| **User & Access Management**| Manage roles, access rights, and user security.                                                     |
+| **Team Collaboration**      | Discussion facilities, comments, and status updates between members.                                |
+| **Data Integration**        | All project data centralized, easily accessible, and ready for use at any time.                     |
 
 ---
 
-## 🚀 **Langkah Instalasi**
+## 🛠 **Technologies & Tools**
 
-### 1. Clone Repository
+| Component         | Stack/Tools                                |
+|-------------------|--------------------------------------------|
+| **Frontend**      | Flutter (Dart)                             |
+| **Backend**       | (Optional: Node.js, Express, or Firebase)  |
+| **Database**      | (Optional: PostgreSQL, Firestore, MySQL)   |
+| **Version Control**| GitHub                                    |
+| **Platform**      | Android, iOS                               |
+
+---
+
+## 🚀 **Installation Steps**
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/rafdi03/APP_PLN.git
 cd APP_PLN
 ```
+
 ### 2. Install Dependencies
 
 ```bash
 flutter pub get
 ```
 
-### 3. Run Aplikasi
+### 3. Run the Application
 
 ```bash
 flutter run
 ```
 
-### 4. Struktur Direktori
+### 4. Directory Structure
 
 ```bash
 APP_PLN/
-├── frontend/           # Source code aplikasi Flutter
+├── frontend/           # Flutter application source code
 │   ├── lib/
 │   ├── ios/
 │   └── android/
-├── backend/            # (Opsional) API, server, dsb
-├── docs/               # Dokumentasi tambahan
-└── README.md           # Dokumentasi utama
+├── backend/            # (Optional) API, server, etc.
+├── docs/               # Additional documentation
+└── README.md           # Main documentation
 ```
 
 ---
 
-## 🏗️ **Contoh User Flow**
+## 🏗️ **User Flow Example**
 
-1. **Login**: User masuk menggunakan akun PLN.
-2. **Akses Dashboard**: Melihat semua proyek aktif & statusnya.
-3. **Input Data**: Menambahkan progres harian proyek.
-4. **Pantau Notifikasi**: Mendapat pengingat deadline.
-5. **Generate Laporan**: Ekspor laporan mingguan ke PDF.
-
----
-
-## 🤝 **Kontribusi**
-
-Kontribusi sangat terbuka 🎉:
-
-1. **Fork** repo ini
-2. Buat branch fitur (`git checkout -b fitur-anda`)
-3. Commit perubahan & push
-4. Buat Pull Request ke `main`
-5. Diskusikan perubahan di PR
+1. **Login:** User logs in with their PLN account.
+2. **Access Dashboard:** View all active projects and their statuses.
+3. **Input Data:** Add daily project progress.
+4. **Monitor Notifications:** Receive deadline reminders.
+5. **Generate Reports:** Export weekly reports to PDF.
 
 ---
 
-## 🧩 **Roadmap Fitur**
+## 🤝 **Contributing**
 
-- [x] Dashboard Monitoring Proyek
-- [x] Manajemen User & Hak Akses
-- [ ] Integrasi Notifikasi via WhatsApp/Email
-- [ ] Sinkronisasi Data dengan Sistem PLN Pusat
-- [ ] Dark Mode dan Kustomisasi UI
-- [ ] Export Data Proyek (PDF, Excel)
+We welcome contributions from everyone 🎉:
+
+1. **Fork** this repository
+2. Create your feature branch (`git checkout -b your-feature`)
+3. Commit and push your changes
+4. Open a Pull Request to `main`
+5. Discuss your changes in the PR
+
+---
+
+## 🧩 **Feature Roadmap**
+
+- [x] Project Monitoring Dashboard
+- [x] User & Access Management
+- [ ] Notification Integration via WhatsApp/Email
+- [ ] Data Synchronization with PLN Central System
+- [ ] Dark Mode and UI Customization
+- [ ] Project Data Export (PDF, Excel)
 - [ ] Multi-language Support
 
 ---
 
-## 📬 **Kontak**
+## 📬 **Contact**
 
-- **GitHub**: [rafdi03](https://github.com/rafdi03) [Buitenzorx](https://github.com/Buitenzorx) 
+- **GitHub**: [rafdi03](https://github.com/rafdi03) | [Buitenzorx](https://github.com/Buitenzorx)
 - **Email**: aryagunayasa15@gmail.com
+
 ---
 
 <details>
   <summary><b>Credits & Thanks</b></summary>
   <ul>
-    <li>Seluruh kontributor & pengguna</li>
+    <li>All contributors & users</li>
   </ul>
 </details>
+
+<!--
+  This README design is intentionally crafted to be aesthetic, detailed, and informative.
+  Add application screenshots, architecture diagrams, or more badges for extra flair.
+-->
